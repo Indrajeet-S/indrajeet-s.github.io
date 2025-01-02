@@ -11,6 +11,11 @@
             --text-color: #fff;
         }
         
+        nav a:hover {
+            text-shadow: 0 0 10px var(--neon-color);
+            transition: text-shadow 0.3s ease;
+        }
+        
         body {
             font-family: 'Courier New', monospace;
             background-color: var(--bg-color);
@@ -98,6 +103,11 @@
 </head>
 <body>
     <div class="container">
+        <nav style="padding: 1rem 0; text-align: center;">
+            <a href="/" style="color: var(--neon-color); text-decoration: none; margin: 0 1rem;">Home</a>
+            <a href="/qbit-hacklabs/" style="color: var(--neon-color); text-decoration: none; margin: 0 1rem;">Projects</a>
+            <a href="/sync-q/" style="color: var(--neon-color); text-decoration: none; margin: 0 1rem;">syncQ</a>
+        </nav>
         <header>
             <h1 class="glitch">QBit</h1>
             <p>AI & Security Enthusiast</p>
