@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>syncQ - QBit's Space</title>
+    <style>
+        :root {
+            --neon-color: #39FF14;  /* Neon green */
+            --bg-color: #0a0a0a;
+            --text-color: #fff;
+            --glow-shadow: rgba(57, 255, 20, 0.2);
+        }
+        
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        nav {
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--neon-color);
+        }
+
+        nav a {
+            color: var(--neon-color);
+            text-decoration: none;
+            margin-right: 2rem;
+        }
+
+        nav a:hover {
+            text-shadow: 0 0 10px var(--neon-color);
+        }
+
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 2px solid var(--neon-color);
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            text-shadow: 0 0 10px var(--neon-color);
+        }
+
+        .content-container {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .thought-card {
+            background: rgba(57, 255, 20, 0.05);
+            border: 1px solid var(--neon-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .thought-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px var(--glow-shadow);
+        }
+
+        .thought-date {
+            color: var(--neon-color);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .thought-content {
+            margin-bottom: 1rem;
+        }
+
+        .thought-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .tag {
+            background: rgba(57, 255, 20, 0.1);
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            border: 1px solid var(--neon-color);
+        }
+
+        .content-type {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--neon-color);
+        }
+
+        .content-type::before {
+            content: ">";
+            position: absolute;
+            left: 0;
+            color: var(--neon-color);
+        }
+
+        .quote {
+            border-left: 3px solid var(--neon-color);
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+        }
+
+        .image-container {
+            max-width: 100%;
+            margin: 1rem 0;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            border: 1px solid var(--neon-color);
+            border-radius: 4px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            border-top: 2px solid var(--neon-color);
+            margin-top: 3rem;
+        }
+
+        /* Matrix rain effect in the background */
+        .matrix-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            opacity: 0.1;
+            background: linear-gradient(0deg, 
+                rgba(57, 255, 20, 0.1) 25%, 
+                rgba(0, 0, 0, 0) 100%);
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .thought-card {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="matrix-bg"></div>
+    <div class="container">
+        <nav>
+            <a href="/">Home</a>
+            <a href="/qbit">Projects</a>
+            <a href="/sync-q">syncQ</a>
+        </nav>
+
+        <header>
+            <h1>syncQ</h1>
+            <p>A digital canvas for my thoughts, discoveries, and random musings</p>
+        </header>
+
+        <div class="content-container">
+            <!-- Example post formats -->
+            <article class="thought-card">
+                <div class="thought-date">2025-01-03</div>
+                <div class="content-type">Thought of the Day</div>
+                <div class="thought-content">
+                    <p>The intersection of quantum computing and cybersecurity fascinates me. The potential to both break and create unbreakable encryption systems feels like science fiction becoming reality.</p>
+                </div>
+                <div class="thought-tags">
+                    <span class="tag">quantum</span>
+                    <span class="tag">cybersecurity</span>
+                    <span class="tag">thoughts</span>
+                </div>
+            </article>
+
+            <article class="thought-card">
+                <div class="thought-date">2025-01-03</div>
+                <div class="content-type">Quote</div>
+                <div class="thought-content">
+                    <div class="quote">
+                        "In the face of ambiguity, refuse the temptation to guess."
+                        — The Zen of Python
+                    </div>
+                    <p>This principle has saved me countless hours of debugging. Sometimes, the best approach is to step back and gather more information rather than making assumptions.</p>
+                </div>
+                <div class="thought-tags">
+                    <span class="tag">programming</span>
+                    <span class="tag">wisdom</span>
+                </div>
+            </article>
+
+            <article class="thought-card">
+                <div class="thought-date">2025-01-03</div>
+                <div class="content-type">Current Experiment</div>
+                <div class="thought-content">
+                    <p>Working on training an AI model to detect social engineering attempts in emails. The challenge isn't just in the technical implementation, but in understanding the psychology behind these attacks.</p>
+                    <div class="image-container">
+                        <img src="/api/placeholder/600/300" alt="Project visualization" />
+                    </div>
+                </div>
+                <div class="thought-tags">
+                    <span class="tag">AI</span>
+                    <span class="tag">security</span>
+                    <span class="tag">research</span>
+                </div>
+            </article>
+        </div>
+
+        <footer>
+            <p>[ QBit's Digital Garden | Growing ideas in the cyber realm ]</p>
+        </footer>
+    </div>
+</body>
+</html>
