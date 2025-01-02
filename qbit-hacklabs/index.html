@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QBit - Projects & Research</title>
+    <style>
+        :root {
+            --neon-color: #ff00ff;  /* Neon purple/pink */
+            --bg-color: #0a0a0a;
+            --text-color: #fff;
+            --glow-shadow: rgba(255, 0, 255, 0.2);
+        }
+        
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        nav {
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--neon-color);
+        }
+
+        nav a {
+            color: var(--neon-color);
+            text-decoration: none;
+            margin-right: 2rem;
+        }
+
+        nav a:hover {
+            text-shadow: 0 0 10px var(--neon-color);
+        }
+
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 2px solid var(--neon-color);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            text-shadow: 0 0 10px var(--neon-color);
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .project-card {
+            background: rgba(255, 0, 255, 0.05);
+            border: 1px solid var(--neon-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px var(--glow-shadow);
+        }
+
+        .project-card h3 {
+            color: var(--neon-color);
+            margin-top: 0;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .tech-tag {
+            background: rgba(255, 0, 255, 0.1);
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            border: 1px solid var(--neon-color);
+        }
+
+        .project-status {
+            margin-top: 1rem;
+            font-style: italic;
+            color: #888;
+        }
+
+        .project-links {
+            margin-top: 1rem;
+        }
+
+        .project-links a {
+            color: var(--neon-color);
+            text-decoration: none;
+            margin-right: 1rem;
+        }
+
+        .project-links a:hover {
+            text-shadow: 0 0 10px var(--neon-color);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            border-top: 2px solid var(--neon-color);
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 600px) {
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="/">Home</a>
+            <a href="/qbit">Projects</a>
+        </nav>
+
+        <header>
+            <h1>Projects & Research</h1>
+            <p>A collection of my work in AI and Security</p>
+        </header>
+
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>AI-Powered Vulnerability Scanner</h3>
+                <p>An intelligent security scanner that uses machine learning to identify potential vulnerabilities in web applications with reduced false positives.</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">TensorFlow</span>
+                    <span class="tech-tag">Web Security</span>
+                </div>
+                <div class="project-status">Status: In Development</div>
+                <div class="project-links">
+                    <a href="#">GitHub</a>
+                    <a href="#">Documentation</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Neural Network IDS</h3>
+                <p>An Intrusion Detection System powered by deep learning, capable of identifying and classifying network attacks in real-time.</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">PyTorch</span>
+                    <span class="tech-tag">Network Security</span>
+                    <span class="tech-tag">Deep Learning</span>
+                </div>
+                <div class="project-status">Status: Active</div>
+                <div class="project-links">
+                    <a href="#">GitHub</a>
+                    <a href="#">Research Paper</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Secure Code Generator</h3>
+                <p>An AI-assisted tool that helps developers write more secure code by suggesting security best practices and identifying potential vulnerabilities during development.</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">NLP</span>
+                    <span class="tech-tag">Security</span>
+                </div>
+                <div class="project-status">Status: Planning</div>
+                <div class="project-links">
+                    <a href="#">Concept Paper</a>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>[ QBit | Innovations in AI & Security ]</p>
+        </footer>
+    </div>
+</body>
+</html>
