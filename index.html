@@ -10,12 +10,12 @@
             --bg-color: #0a0a0a;
             --text-color: #fff;
         }
-        
+
         nav a:hover {
             text-shadow: 0 0 10px var(--neon-color);
             transition: text-shadow 0.3s ease;
         }
-        
+
         body {
             font-family: 'Courier New', monospace;
             background-color: var(--bg-color);
@@ -84,9 +84,42 @@
 
         footer {
             text-align: center;
-            padding: 2rem 0;
+            padding: 3rem 0;
             border-top: 2px solid var(--neon-color);
         }
+
+        footer p {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+        }
+
+        .social-icons img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 0 5px var(--neon-color));
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .social-icons img:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.7));
+    background-color: rgba(0, 255, 255, 0.15);
+    border-radius: 8px;
+    transition: transform 0.3s ease, filter 0.3s ease, background-color 0.3s ease;
+}
 
         .terminal {
             background: rgba(0, 0, 0, 0.7);
@@ -150,6 +183,17 @@
 
         <footer>
             <p>[ QBit | AI & Security Researcher ]</p>
+            <div class="social-icons">
+                <a href="https://x.com/QBit_069" target="_blank" title="X">
+                    <img src="imgs/x.png" alt="X">
+                </a>
+                <a href="https://github.com/Indrajeet-S" target="_blank" title="GitHub">
+                    <img src="imgs/github.png" alt="GitHub">
+                </a>
+                <a href="https://discord.com/users/858742600550580234" target="_blank" title="Discord">
+                    <img src="imgs/discord.png" alt="Discord">
+                </a>
+            </div>
         </footer>
     </div>
 </body>
